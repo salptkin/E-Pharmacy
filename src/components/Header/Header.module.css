@@ -1,0 +1,62 @@
+.container {
+    width: 100%;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-gray);
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 28px 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding: 28px 128px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        gap: 16px;
+    }
+}
+
+.burgerBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.burgerBtn svg {
+    width: 32px;
+    height: 26px;
+}
+
+.whiteSvg {
+    stroke: #fff;
+}
+
+.greenSvg {
+    stroke: #59b17a;
+}
+
+.box {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Renk değişkenleri */
+:root {
+    --light-gray: #f7f8fa;
+}
