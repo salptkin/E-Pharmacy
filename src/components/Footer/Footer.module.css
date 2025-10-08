@@ -1,0 +1,92 @@
+.container {
+    padding: 20px 20px;
+    background: var(--green);
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 32px 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding: 40px 128px;
+    }
+}
+
+.mainWrapper {
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .mainWrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 88px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .mainWrapper {
+        gap: 115px;
+        margin-bottom: 64px;
+    }
+}
+
+.textWrapper {
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .textWrapper {
+        margin-bottom: 0;
+    }
+}
+
+.text {
+    color: var(--light-gray);
+    width: 261px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28em;
+}
+
+@media only screen and (min-width: 768px) {
+    .text {
+        font-size: 16px;
+        line-height: 1.25em;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .text {
+        width: 311px;
+    }
+}
+
+.linksWrapper {
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .linksWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .linksWrapper {
+        flex-direction: row;
+        gap: 270px;
+    }
+}
+
+/* Global renk değişkenleri */
+:root {
+    --green: #59b17a;
+    --light-gray: #f1f1f1;
+}

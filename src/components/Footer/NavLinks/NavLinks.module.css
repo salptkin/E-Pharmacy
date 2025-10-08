@@ -1,0 +1,38 @@
+.navList {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 80px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    color: var(--light-gray);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.28em;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .navList {
+        margin-bottom: 32px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .navList {
+        gap: 50px;
+        margin-bottom: 0;
+    }
+}
+
+/* Global renk değişkeni */
+:root {
+    --light-gray: #f1f1f1;
+}

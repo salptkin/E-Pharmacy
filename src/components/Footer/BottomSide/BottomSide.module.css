@@ -1,0 +1,40 @@
+.wrapper {
+    border-top: 1px solid var(--outline);
+    padding-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        padding-top: 33px;
+    }
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--light-gray);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .list {
+        gap: 24px;
+        font-size: 14px;
+        line-height: 1.28em;
+    }
+}
+
+/* Global renk / border değişkenleri */
+:root {
+    --light-gray: #f1f1f1;
+    --outline: #dcdcdc;
+    /* örnek outline rengi */
+}

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import { refreshUserThunk } from './redux/auth/operations'
 import { selectToken, selectIsRefresh } from './redux/auth/selectors'
 import './App.css'
@@ -37,37 +38,41 @@ function App() {
         <Route path="/" element={
           <>
             <Header pageType="home" />
-            <main style={{ padding: '20px' }}>
+            <main style={{ padding: '20px', minHeight: '60vh' }}>
               <h1>Welcome to E-Pharmacy</h1>
               <p>Header component is working! You can test login/logout functionality.</p>
             </main>
+            <Footer />
           </>
         } />
         <Route path="/home" element={
           <>
             <Header pageType="home" />
-            <main style={{ padding: '20px' }}>
+            <main style={{ padding: '20px', minHeight: '60vh' }}>
               <h1>Home Page</h1>
               <p>This is the home page with green header background.</p>
             </main>
+            <Footer />
           </>
         } />
         <Route path="/medicine-store" element={
           <>
             <Header pageType="other" />
-            <main style={{ padding: '20px' }}>
+            <main style={{ padding: '20px', minHeight: '60vh' }}>
               <h1>Medicine Store</h1>
               <p>Browse our medicine stores.</p>
             </main>
+            <Footer />
           </>
         } />
         <Route path="/medicine" element={
           <>
             <Header pageType="other" />
-            <main style={{ padding: '20px' }}>
+            <main style={{ padding: '20px', minHeight: '60vh' }}>
               <h1>Medicine</h1>
               <p>Find your medicines here.</p>
             </main>
+            <Footer />
           </>
         } />
       </Routes>

@@ -1,0 +1,40 @@
+.navLink {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoImg {
+    width: 32px;
+    height: 32px;
+    background: var(--light-gray);
+}
+
+.logoText {
+    color: var(--light-gray);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.48px;
+}
+
+@media only screen and (min-width: 768px) {
+    .navLink {
+        gap: 14px;
+    }
+
+    .logoImg {
+        width: 44px;
+        height: 44px;
+    }
+
+    .logoText {
+        font-size: 20px;
+        letter-spacing: -0.6px;
+    }
+}
+
+/* Global renk değişkeni */
+:root {
+    --light-gray: #f1f1f1;
+}
