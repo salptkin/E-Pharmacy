@@ -1,0 +1,304 @@
+.container {
+    padding: 64px 20px 80px;
+    background: var(--light-gray);
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 80px 32px 120px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding: 100px 128px 120px;
+    }
+}
+
+.title {
+    color: var(--black);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.14em;
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .title {
+        margin-bottom: 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .title {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px 16px;
+        width: 704px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .list {
+        width: 1248px;
+        gap: 40px 20px;
+    }
+}
+
+.item {
+    position: relative;
+    padding: 32px 32px 40px;
+    border-radius: 27px;
+    border: 1.155px solid var(--sub-white);
+    background: #e7f1ed;
+    overflow: hidden;
+}
+
+.item::before {
+    position: absolute;
+    content: "";
+    width: 166.806px;
+    height: 35.383px;
+    transform: rotate(22deg);
+    right: -50.914px;
+    bottom: -30.039px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(89, 177, 122, 0.08);
+}
+
+.item::after {
+    position: absolute;
+    content: "";
+    width: 166.806px;
+    height: 35.383px;
+    transform: rotate(22deg);
+    right: -42.914px;
+    bottom: 19.961px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(89, 177, 122, 0.08);
+}
+
+@media only screen and (min-width: 768px) {
+    .item {
+        min-width: 344px;
+        padding: 40px;
+    }
+
+    .item::before {
+        right: -57.914px;
+        bottom: 162.961px;
+    }
+
+    .item::after {
+        right: -39.914px;
+        bottom: 217.961px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .item {
+        min-width: 381px;
+    }
+
+    .item::before {
+        right: -34.914px;
+        bottom: 164.961px;
+    }
+
+    .item::after {
+        right: -17.914px;
+        bottom: 219.961px;
+    }
+}
+
+.subTitle {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-bottom: 32px;
+    max-width: 123px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 768px) {
+    .subTitle {
+        font-size: 20px;
+        margin-bottom: 20px;
+        max-width: 150px;
+    }
+}
+
+.addressBox {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.addressBox svg {
+    width: 18px;
+    height: 18px;
+}
+
+.addressBox ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28em;
+}
+
+@media only screen and (min-width: 768px) {
+    .addressBox {
+        margin-bottom: 14px;
+    }
+
+    .addressBox ul {
+        font-size: 16px;
+        line-height: 1.25em;
+    }
+}
+
+.phoneBox {
+    position: relative;
+    display: flex;
+    gap: 8px;
+}
+
+.phoneBox svg {
+    width: 18px;
+    height: 18px;
+}
+
+.phoneBox p {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28em;
+}
+
+.phoneBox::after {
+    position: absolute;
+    content: "";
+    width: 166.806px;
+    height: 35.383px;
+    transform: rotate(22deg);
+    right: -132.914px;
+    bottom: 1.96px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(89, 177, 122, 0.08);
+}
+
+@media only screen and (min-width: 768px) {
+    .phoneBox {
+        font-size: 16px;
+        line-height: 1.25em;
+        margin-bottom: 36px;
+    }
+
+    .phoneBox::after {
+        right: -138.914px;
+        bottom: 128.96px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .phoneBox::after {
+        right: -123.91px;
+        bottom: 128.96px;
+    }
+}
+
+.visitStoreBtn a {
+    display: block;
+    padding: 10px 16px;
+    background: var(--green);
+    border-radius: 24px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1em;
+    transition: 0.3s ease;
+}
+
+.visitStoreBtn a:hover {
+    background: #3f945f;
+}
+
+.ratingWithBtn {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .ratingWithBtn {
+        top: 202px;
+        right: 40px;
+    }
+}
+
+.isOpenItem {
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5em;
+    letter-spacing: -0.24px;
+}
+
+.isOpen {
+    background: rgba(89, 177, 122, 0.1);
+    color: var(--green);
+}
+
+.isClosed {
+    background: rgba(232, 80, 80, 0.1);
+    color: #e85050;
+}
+
+.ratingBox {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ratingBox svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffc531;
+}
+
+.ratingBox p {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.28em;
+}
