@@ -8,6 +8,7 @@ import RegistrationPage from './pages/RegistrationPage/RegistrationPage'
 import LoginPage from './pages/LoginPage/LoginPage'
 import MedicineStorePage from './pages/MedicineStorePage/MedicineStorePage'
 import MedicinePage from './pages/MedicinePage/MedicinePage'
+import ProductDetailPage from './pages/ProductDetailPage/ProductDetailPage'
 import { refreshUserThunk } from './redux/auth/operations'
 import { selectToken, selectIsRefresh } from './redux/auth/selectors'
 import './App.css'
@@ -65,6 +66,13 @@ function App() {
           <>
             <Header pageType="other" />
             <MedicinePage />
+            <Footer />
+          </>
+        } />
+        <Route path="/product" element={
+          <>
+            <Header pageType="other" />
+            <ProductDetailPage />
             <Footer />
           </>
         } />
