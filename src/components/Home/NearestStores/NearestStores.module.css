@@ -1,0 +1,318 @@
+.container {
+    padding-bottom: 80px;
+    background: var(--light-gray);
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding-bottom: 120px;
+    }
+}
+
+.title {
+    color: var(--black);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.14em;
+    margin-bottom: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+    .title {
+        font-size: 40px;
+        line-height: 1.2em;
+    }
+}
+
+.text {
+    color: var(--gray);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28em;
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .text {
+        font-size: 16px;
+        line-height: 1.25em;
+        margin-bottom: 64px;
+    }
+}
+
+.wrapper {
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px 16px;
+        width: 704px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .list {
+        width: 1248px;
+        gap: 38px 36px;
+    }
+}
+
+.item {
+    position: relative;
+    padding: 32px 32px 40px;
+    border-radius: 27px;
+    border: 1.155px solid var(--sub-white);
+    background: #e7f1ed;
+    overflow: hidden;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    width: 166.806px;
+    height: 35.383px;
+    transform: rotate(22deg);
+    right: -50.914px;
+    bottom: -30.039px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(89, 177, 122, 0.08);
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    width: 166.806px;
+    height: 35.383px;
+    transform: rotate(22deg);
+    right: -42.914px;
+    bottom: 19.961px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(89, 177, 122, 0.08);
+}
+
+@media only screen and (min-width: 768px) {
+    .item {
+        min-width: 344px;
+        padding: 40px 40px 46px;
+    }
+
+    .item::before {
+        right: -88.914px;
+        bottom: -27.039px;
+    }
+
+    .item::after {
+        right: -74.914px;
+        bottom: 23.961px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .item {
+        min-width: 392px;
+    }
+
+    .item::before {
+        right: -33.914px;
+        bottom: -24.039px;
+    }
+
+    .item::after {
+        right: -17.914px;
+        bottom: 29.961px;
+    }
+}
+
+.subTitle {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-bottom: 32px;
+    max-width: 123px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 768px) {
+    .subTitle {
+        font-size: 20px;
+        margin-bottom: 40px;
+        max-width: 150px;
+    }
+}
+
+.addressBox {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.addressBox svg {
+    width: 18px;
+    height: 18px;
+}
+
+.addressBox ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28em;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .addressBox {
+        margin-bottom: 14px;
+    }
+
+    .addressBox ul {
+        font-size: 16px;
+        line-height: 1.25em;
+    }
+}
+
+.phoneBox {
+    position: relative;
+    display: flex;
+    gap: 8px;
+}
+
+.phoneBox::after {
+    content: "";
+    position: absolute;
+    width: 166.806px;
+    height: 35.383px;
+    transform: rotate(22deg);
+    right: -132.914px;
+    bottom: 1.96px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(89, 177, 122, 0.08);
+}
+
+.phoneBox svg {
+    width: 18px;
+    height: 18px;
+}
+
+.phoneBox p {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28em;
+}
+
+@media only screen and (min-width: 768px) {
+    .phoneBox {
+        font-size: 16px;
+        line-height: 1.25em;
+    }
+
+    .phoneBox::after {
+        right: -170.914px;
+        bottom: 0.96px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .phoneBox::after {
+        right: -119.91px;
+        bottom: 5.96px;
+    }
+}
+
+.ratingWithBtn {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .ratingWithBtn {
+        top: 40px;
+        right: 24px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .ratingWithBtn {
+        right: 40px;
+    }
+}
+
+.ratingBox {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ratingBox svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffc531;
+}
+
+.ratingBox p {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.28em;
+}
+
+.isOpenItem {
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5em;
+    letter-spacing: -0.24px;
+    text-align: center;
+}
+
+.open {
+    background: rgba(89, 177, 122, 0.1);
+    color: var(--green);
+}
+
+.close {
+    background: rgba(232, 80, 80, 0.1);
+    color: #e85050;
+}
+
+:root {
+    --light-gray: #f1f1f1;
+    --sub-white: #f1f1f1;
+    --green: #59b17a;
+    --gray: #7b7b7b;
+    --black: #252539;
+}

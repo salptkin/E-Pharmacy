@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Logo from "./HeaderLogo/HeaderLogo";
-import sprite from "/public/images/sprite.svg";
 import Menu from "./Menu/Menu";
 import NavLinks from "./NavLinks/Navlinks";
 import Links from "./Links/Links";
@@ -9,6 +8,8 @@ import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import { useMediaQuery } from "react-responsive";
 import styles from "./Header.module.css";
+
+const sprite = "/images/sprite.svg";
 
 const Header = ({ pageType }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

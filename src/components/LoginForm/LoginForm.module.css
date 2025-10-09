@@ -1,0 +1,160 @@
+.container {
+    padding: 25px 20px 191px;
+    background: var(--light-gray);
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 28px 32px 250px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding: 28px 98px 262px 100px;
+    }
+}
+
+.logoWrapper {
+    width: 135px;
+    margin-bottom: 106px;
+}
+
+@media only screen and (min-width: 768px) {
+    .logoWrapper {
+        width: 172px;
+        margin-bottom: 168px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .logoWrapper {
+        margin-bottom: 226px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .mainWrapper {
+        display: flex;
+        gap: 150px;
+    }
+}
+
+.titleBox {
+    position: relative;
+    z-index: 10;
+}
+
+.imgWrapper {
+    position: absolute;
+    top: -56px;
+    right: 20px;
+    z-index: -10;
+}
+
+@media only screen and (min-width: 768px) {
+    .imgWrapper {
+        top: -104px;
+        right: 19px;
+    }
+}
+
+.title {
+    color: var(--black);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.21em;
+    margin-bottom: 20px;
+}
+
+.title span {
+    color: var(--green);
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 128px;
+}
+
+.inputBox label {
+    position: relative;
+}
+
+.inputBox span {
+    position: absolute;
+    color: #e85050;
+    bottom: -10px;
+    left: 18px;
+    font-size: 12px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 13px 18px;
+    border-radius: 60px;
+    border: 1px solid rgba(29, 30, 33, 0.1);
+    background: var(--white);
+    color: rgba(29, 30, 33, 0.4);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+    .inputBox {
+        margin-bottom: 62px;
+    }
+
+    .inputBox input {
+        width: 280px;
+    }
+}
+
+.btnBox {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btnBox a {
+    display: flex;
+    justify-content: center;
+    color: rgba(29, 30, 33, 0.4);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.submitBtn {
+    background: var(--green);
+    padding: 13px 129px;
+    width: 100%;
+    border-radius: 60px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.28em;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.submitBtn:hover {
+    background: #3f945f;
+}
+
+@media only screen and (min-width: 768px) {
+    .submitBtn {
+        padding: 13px 112px;
+    }
+}
+
+/* Variables */
+:root {
+    --light-gray: #f1f1f1;
+    --green: #59b17a;
+    --white: #f1f1f1;
+    --black: #252539;
+}

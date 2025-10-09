@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import sprite from "/public/images/sprite.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { selectUser } from "../../../redux/auth/selectors";
@@ -7,6 +6,8 @@ import { selectCart } from "../../../redux/pharmacy/selectors";
 import { getCartItems } from "../../../redux/pharmacy/operations";
 import { getUserInfoThunk } from "../../../redux/auth/operations";
 import styles from "./UserIcon.module.css";
+
+const sprite = "/images/sprite.svg";
 
 const UserIcon = ({ pageType }) => {
   const dispatch = useDispatch();

@@ -5,7 +5,7 @@ const BottomSide = () => {
   return (
     <div className={styles.wrapper}>
       <ul className={styles.list}>
-        <li>© E-Pharmacy 2023. All Rights Reserved</li>
+        <li>© E-Pharmacy 2025. All Rights Reserved</li>
         <li>|</li>
         <li>Privacy Policy</li>
         <li>|</li>

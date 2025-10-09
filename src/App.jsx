@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import HomePage from './pages/HomePage/HomePage'
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage'
+import LoginPage from './pages/LoginPage/LoginPage'
 import { refreshUserThunk } from './redux/auth/operations'
 import { selectToken, selectIsRefresh } from './redux/auth/selectors'
 import './App.css'
@@ -38,20 +41,14 @@ function App() {
         <Route path="/" element={
           <>
             <Header pageType="home" />
-            <main style={{ padding: '20px', minHeight: '60vh' }}>
-              <h1>Welcome to E-Pharmacy</h1>
-              <p>Header component is working! You can test login/logout functionality.</p>
-            </main>
+            <HomePage />
             <Footer />
           </>
         } />
         <Route path="/home" element={
           <>
             <Header pageType="home" />
-            <main style={{ padding: '20px', minHeight: '60vh' }}>
-              <h1>Home Page</h1>
-              <p>This is the home page with green header background.</p>
-            </main>
+            <HomePage />
             <Footer />
           </>
         } />
@@ -75,6 +72,8 @@ function App() {
             <Footer />
           </>
         } />
+        <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </div>
   )
