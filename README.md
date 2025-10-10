@@ -4,7 +4,6 @@ A modern, full-featured e-commerce platform for purchasing medicines and healthc
 
 [![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://your-vercel-url.vercel.app)
 [![Backend API](https://img.shields.io/badge/API-running-blue.svg)](https://e-pharmacy-backend-7d06.onrender.com)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## 📋 Table of Contents
 
@@ -15,7 +14,6 @@ A modern, full-featured e-commerce platform for purchasing medicines and healthc
 - [API Integration](#api-integration)
 - [Performance Optimizations](#performance-optimizations)
 - [Available Scripts](#available-scripts)
-- [Deployment](#deployment)
 - [Contributing](#contributing)
 
 ## ✨ Features
@@ -210,3 +208,58 @@ npm run build
 ```
 
 Creates optimized production build in `dist/` folder.
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. **Push to the branch**
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Open a Pull Request**
+
+### Coding Standards
+
+- Use ES6+ syntax
+- Follow React best practices
+- Write meaningful commit messages
+- Add comments for complex logic
+- Ensure code passes linting (`npm run lint`)
+- Test your changes before submitting
+
+### Bug Reports
+
+If you find a bug, please open an issue with:
+
+- Clear description of the bug
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots (if applicable)
+
+## 👥 Author
+
+**Samet Alptekin Eroğlu**
+
+- GitHub: [@salptkin](https://github.com/salptkin)
+- LinkedIn: [Samet Alptekin Eroğlu](https://www.linkedin.com/in/samet-alptekin-eroğlu-362806244)
+
+## 🙏 Acknowledgments
+
+- Backend API: [E-Pharmacy Backend](https://e-pharmacy-backend-7d06.onrender.com)
+- Icons: Custom SVG sprite
+- Fonts: Inter font family
+- Design inspiration from modern e-commerce platforms
+
+⭐ **Star this repository if you find it helpful!**
+
+Made with ❤️ by [Samet Alptekin Eroğlu](https://github.com/salptkin)
