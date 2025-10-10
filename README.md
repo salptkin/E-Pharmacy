@@ -2,7 +2,7 @@
 
 A modern, full-featured e-commerce platform for purchasing medicines and healthcare products online. Built with React, Redux Toolkit, and integrated with a robust backend API.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://your-vercel-url.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://e-pharmacy-mhkp.vercel.app)
 [![Backend API](https://img.shields.io/badge/API-running-blue.svg)](https://e-pharmacy-backend-7d06.onrender.com)
 
 ## 📋 Table of Contents
@@ -237,21 +237,12 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 - Ensure code passes linting (`npm run lint`)
 - Test your changes before submitting
 
-### Bug Reports
-
-If you find a bug, please open an issue with:
-
-- Clear description of the bug
-- Steps to reproduce
-- Expected vs actual behavior
-- Screenshots (if applicable)
-
 ## 👥 Author
 
 **Samet Alptekin Eroğlu**
 
 - GitHub: [@salptkin](https://github.com/salptkin)
-- LinkedIn: [Samet Alptekin Eroğlu](https://www.linkedin.com/in/samet-alptekin-eroğlu-362806244)
+- LinkedIn: [Samet Alptekin Eroğlu](https://www.linkedin.com/in/salptekineroglu)
 
 ## 🙏 Acknowledgments
 
