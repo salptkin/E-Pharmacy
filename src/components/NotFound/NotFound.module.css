@@ -1,0 +1,98 @@
+.container {
+    min-height: calc(100vh - 200px);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 60px 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding: 80px 128px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .image {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .image {
+        max-width: 500px;
+    }
+}
+
+.wrapper h3 {
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper h3 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .wrapper h3 {
+        font-size: 32px;
+    }
+}
+
+.wrapper p {
+    font-size: 18px;
+    color: var(--black);
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper p {
+        font-size: 20px;
+    }
+}
+
+.link {
+    background: var(--green);
+    color: var(--white);
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+@media only screen and (min-width: 768px) {
+    .link {
+        font-size: 18px;
+        padding: 12px 35px;
+    }
+}
+
+.link:hover {
+    background: #3f945f;
+}

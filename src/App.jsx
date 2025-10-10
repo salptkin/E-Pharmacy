@@ -10,6 +10,7 @@ import MedicineStorePage from './pages/MedicineStorePage/MedicineStorePage'
 import MedicinePage from './pages/MedicinePage/MedicinePage'
 import ProductDetailPage from './pages/ProductDetailPage/ProductDetailPage'
 import CartPage from './pages/CartPage/CartPage'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import { refreshUserThunk } from './redux/auth/operations'
 import { selectToken, selectIsRefresh } from './redux/auth/selectors'
 import './App.css'
@@ -86,6 +87,13 @@ function App() {
         } />
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={
+          <>
+            <Header pageType="other" />
+            <NotFoundPage />
+            <Footer />
+          </>
+        } />
       </Routes>
     </div>
   )
