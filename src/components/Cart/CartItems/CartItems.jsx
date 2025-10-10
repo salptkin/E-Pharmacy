@@ -9,7 +9,6 @@ import {
   getProductById,
 } from "../../../redux/pharmacy/operations";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import styles from "./CartItems.module.css";
 
 const CartItems = () => {

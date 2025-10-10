@@ -48,7 +48,7 @@ const Reviews = () => {
     ? apiReviews 
     : mockReviews.slice(0, reviewsLimit);
 
-  const getAvatarUrl = (review, index) => {
+  const getAvatarUrl = (review) => {
     if (review.photo && review.photo.startsWith('http')) {
       return review.photo;
     }

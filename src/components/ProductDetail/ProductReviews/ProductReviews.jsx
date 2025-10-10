@@ -12,7 +12,9 @@ import styles from "./ProductReviews.module.css";
 
 const ProductReviews = () => {
   const product = useSelector(selectProduct);
-  
+  const [showDesc, setShowDesc] = useState(true);
+  const [showReviews, setShowReviews] = useState(false);
+  const isTabletOrDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   
   // Product henüz yüklenmemişse loading göster
   if (!product) {
@@ -39,11 +41,6 @@ const ProductReviews = () => {
     immune_support,
     medicinal_uses,
   } = description;
-
-  const [showDesc, setShowDesc] = useState(true);
-  const [showReviews, setShowReviews] = useState(false);
-
-  const isTabletOrDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
     <div className={styles.wrapper}>
