@@ -1,16 +1,212 @@
-# React + Vite
+# 🏥 E-Pharmacy - Online Medicine Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, full-featured e-commerce platform for purchasing medicines and healthcare products online. Built with React, Redux Toolkit, and integrated with a robust backend API.
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://your-vercel-url.vercel.app)
+[![Backend API](https://img.shields.io/badge/API-running-blue.svg)](https://e-pharmacy-backend-7d06.onrender.com)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Table of Contents
 
-## React Compiler
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [API Integration](#api-integration)
+- [Performance Optimizations](#performance-optimizations)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+### 🛒 Core Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Product Catalog**: Browse medicines by category with advanced filtering
+- **Search & Filter**: Find products quickly with search and category filters
+- **Shopping Cart**: Add, update quantities, and manage cart items
+- **Checkout System**: Complete orders with shipping details and payment options
+- **User Authentication**: Secure login/register system with JWT tokens
+- **Product Details**: Detailed product information with reviews and descriptions
+- **Store Locator**: Find nearest medicine stores
+
+### 💫 User Experience
+
+- **Responsive Design**: Fully responsive on mobile, tablet, and desktop
+- **Loading States**: Smooth loading indicators and suspense fallbacks
+- **Toast Notifications**: Real-time feedback for user actions
+- **404 Page**: Custom not-found page with navigation
+- **Persistent Cart**: Cart items saved using Redux Persist
+- **Form Validation**: Client-side validation with Formik & Yup
+
+### 🎨 UI/UX Features
+
+- **Modern Design**: Clean, intuitive interface
+- **Mobile Menu**: Hamburger menu for mobile/tablet devices
+- **Product Cards**: Beautiful product showcase with images
+- **Review System**: Customer reviews and ratings
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- **React 19** - UI library
+- **Redux Toolkit** - State management
+- **React Router v7** - Client-side routing with lazy loading
+- **Formik** - Form management
+- **Yup** - Schema validation
+- **Axios** - HTTP client
+- **Redux Persist** - Persistent state
+- **React Toastify** - Toast notifications
+- **React Responsive** - Responsive utilities
+- **React Paginate** - Pagination
+- **React Select** - Select dropdown
+- **CSS Modules** - Scoped styling
+
+### Build Tools
+
+- **Vite** - Fast build tool and dev server
+- **ESLint** - Code linting
+- **Git** - Version control
+
+### Backend
+
+- **Backend API**: [https://e-pharmacy-backend-7d06.onrender.com](https://e-pharmacy-backend-7d06.onrender.com)
+- RESTful API with JWT authentication
+- Product management and cart operations
+- User authentication and authorization
+- Order processing
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- Git
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/salptkin/E-Pharmacy.git
+cd E-Pharmacy
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Start development server**
+
+```bash
+npm run dev
+```
+
+4. **Open your browser**
+
+```
+http://localhost:5173
+```
+
+### Environment Variables (Optional)
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_URL=https://e-pharmacy-backend-7d06.onrender.com
+```
+
+## 📁 Project Structure
+
+```
+E-Pharmacy/
+├── public/
+│   ├── images/           # Static images
+│   └── fonts/            # Font files
+├── src/
+│   ├── components/       # React components
+│   │   ├── Header/
+│   │   ├── Footer/
+│   │   ├── Home/
+│   │   ├── Medicine/
+│   │   ├── Cart/
+│   │   ├── ProductDetail/
+│   │   └── ...
+│   ├── pages/           # Page components (lazy loaded)
+│   │   ├── HomePage/
+│   │   ├── MedicinePage/
+│   │   ├── CartPage/
+│   │   └── ...
+│   ├── redux/           # Redux store and slices
+│   │   ├── auth/        # Authentication slice
+│   │   ├── pharmacy/    # Pharmacy/products slice
+│   │   └── store.js     # Redux store configuration
+│   ├── schemas/         # Validation schemas
+│   ├── data/            # Mock data
+│   ├── styles/          # Global styles
+│   ├── App.jsx          # Main app component
+│   └── main.jsx         # App entry point
+├── vercel.json          # Vercel deployment config
+└── package.json
+```
+
+## 🔌 API Integration
+
+### Base URL
+
+```javascript
+const BASE_URL = "https://e-pharmacy-backend-7d06.onrender.com/api";
+```
+
+## ⚡ Performance Optimizations
+
+### Code Splitting
+
+- **Lazy Loading**: All page components are lazy loaded
+- **Bundle Size**: Reduced initial bundle from 606 KB to 379 KB (-37.5%)
+- **Chunk Splitting**: Separate chunks for each page
+
+### Before Optimization
+
+```
+Bundle size: 606.82 kB (gzip: 197.28 kB)
+```
+
+### After Optimization
+
+```
+Initial bundle: 378.87 kB (gzip: 125.63 kB)
++ Separate chunks for each page (0.57 KB - 92.92 KB)
+```
+
+### Other Optimizations
+
+- Redux Persist for cart persistence
+- Optimistic UI updates
+- Debounced search inputs
+- Memoized components (where needed)
+- CSS Modules for scoped styles
+- Gzip compression on Vercel
+
+## 📜 Available Scripts
+
+### Development
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+```
+
+### Build Output
+
+```bash
+npm run build
+```
+
+Creates optimized production build in `dist/` folder.
