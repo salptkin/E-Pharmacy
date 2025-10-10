@@ -131,7 +131,7 @@ export const updateCart = createAsyncThunk(
       }
       setToken(token);
       const response = await instance.put("/cart/update", body);
-      toast.success("Cart updated successfully");
+      toast.success("Product quantity updated");
       return response.data;
     } catch (error) {
       if (error.response) {

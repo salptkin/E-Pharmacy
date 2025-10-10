@@ -1,0 +1,55 @@
+.container {
+    padding: 64px 20px 80px;
+    background: var(--lightGray);
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 80px 32px 120px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding: 100px 128px 120px;
+    }
+}
+
+.title {
+    color: var(--black);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.14em;
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .title {
+        margin-bottom: 32px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .title {
+        margin-bottom: 40px;
+    }
+}
+
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+    .mainWrapper {
+        gap: 64px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .mainWrapper {
+        flex-direction: row;
+        gap: 96px;
+    }
+}

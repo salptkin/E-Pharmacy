@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./HeaderLogo/HeaderLogo";
 import Menu from "./Menu/Menu";
 import NavLinks from "./NavLinks/Navlinks";
@@ -7,6 +7,7 @@ import UserIcon from "./UserIcon/UserIcon";
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import { useMediaQuery } from "react-responsive";
+import { useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const sprite = "/images/sprite.svg";
@@ -14,10 +15,16 @@ const sprite = "/images/sprite.svg";
 const Header = ({ pageType }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOpenMenu = () => setIsMenuOpen(true);
   const handleCloseMenu = () => setIsMenuOpen(false);
+
+  // Sayfa değiştiğinde menüyü kapat
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   const headerBackground = pageType === "home" ? "#59B17A" : "#F7F8FA";
 
