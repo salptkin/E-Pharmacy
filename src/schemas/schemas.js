@@ -1,7 +1,8 @@
 import * as Yup from "yup";
 
+// Türkiye telefon numarası formatı: +90 5XX XXX XX XX veya 0 5XX XXX XX XX
 const phoneRegex =
-  /^(\+?380|\+?38|\(?0)\d{2}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+  /^(\+90\s?5\d{2}\s?\d{3}\s?\d{2}\s?\d{2}|0\s?5\d{2}\s?\d{3}\s?\d{2}\s?\d{2})$/;
 
 export const registerSchema = Yup.object().shape({
   name: Yup.string()
