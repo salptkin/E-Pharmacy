@@ -30,10 +30,20 @@ const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
+    <div 
+      className={styles.overlay} 
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
       <div className={styles.content} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeBtn} onClick={onClose}>
-          <svg>
+        <button 
+          className={styles.closeBtn} 
+          onClick={onClose}
+          aria-label="Modal'ı kapat"
+        >
+          <svg aria-hidden="true">
             <use href={`${sprite}#close`} />
           </svg>
         </button>

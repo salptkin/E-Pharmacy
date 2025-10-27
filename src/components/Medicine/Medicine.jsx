@@ -85,7 +85,8 @@ const Medicine = () => {
                   <div className={styles.imgBox}>
                     <img 
                       src={isValidImageUrl(product.photo) ? product.photo : DEFAULT_MEDICINE_IMAGE}
-                      alt={product.name}
+                      alt={`${product.name} ürün görseli`}
+                      loading="lazy"
                       onError={(e) => {
                         e.target.src = DEFAULT_MEDICINE_IMAGE;
                       }}
@@ -102,6 +103,7 @@ const Medicine = () => {
                         type="button"
                         className={styles.addToCartBtn}
                         onClick={() => handleAddToCart(product._id)}
+                        aria-label={`${product.name} ürününü sepete ekle`}
                       >
                         Add to cart
                       </button>
@@ -109,6 +111,7 @@ const Medicine = () => {
                         type="button"
                         className={styles.detailsBtn}
                         onClick={() => handleDetailsClick(product._id)}
+                        aria-label={`${product.name} ürün detaylarını göster`}
                       >
                         Details
                       </button>

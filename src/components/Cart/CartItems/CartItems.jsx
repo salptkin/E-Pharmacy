@@ -85,7 +85,11 @@ const CartItems = () => {
             onClick={() => handleProductClick(product.productId._id)}
           >
             <div className={styles.imgBox}>
-              <img src={product.productId.photo} alt="product" />
+              <img 
+                src={product.productId.photo} 
+                alt={`${product.productId.name} ürün görseli`}
+                loading="lazy"
+              />
             </div>
             <div className={styles.textBox}>
               <div className={styles.mainTextWrap}>
@@ -96,7 +100,7 @@ const CartItems = () => {
                 <p className={styles.price}>{`৳ ${product.productId.price}`}</p>
               </div>
               <div className={styles.btnBox}>
-                <div className={styles.amountBox}>
+                <div className={styles.amountBox} role="group" aria-label="Miktar seçici">
                   <button
                     type="button"
                     disabled={updatingProductId === product.productId._id}
@@ -104,12 +108,13 @@ const CartItems = () => {
                       e.stopPropagation();
                       handleDecreaseAmount(product.productId._id, product.quantity);
                     }}
+                    aria-label={`${product.productId.name} miktarını azalt`}
                   >
-                    <svg>
+                    <svg aria-hidden="true">
                       <use href={`${sprite}#minus`} />
                     </svg>
                   </button>
-                  <p>{product.quantity}</p>
+                  <p aria-live="polite">{product.quantity}</p>
                   <button
                     type="button"
                     disabled={updatingProductId === product.productId._id}
@@ -117,8 +122,9 @@ const CartItems = () => {
                       e.stopPropagation();
                       handleIncreaseAmount(product.productId._id);
                     }}
+                    aria-label={`${product.productId.name} miktarını artır`}
                   >
-                    <svg>
+                    <svg aria-hidden="true">
                       <use href={`${sprite}#plus`} />
                     </svg>
                   </button>
@@ -131,6 +137,7 @@ const CartItems = () => {
                     e.stopPropagation();
                     handleDeleteProduct(product.productId._id);
                   }}
+                  aria-label={`${product.productId.name} ürününü sepetten kaldır`}
                 >
                   Remove
                 </button>

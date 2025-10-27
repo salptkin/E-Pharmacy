@@ -38,13 +38,18 @@ const Header = ({ pageType }) => {
           {isLoggedIn && !isDesktop && (
             <div className={styles.wrapper}>
               <UserIcon pageType={pageType} />
-              <button className={styles.burgerBtn} onClick={handleOpenMenu}>
+              <button 
+                className={styles.burgerBtn} 
+                onClick={handleOpenMenu}
+                aria-label="Menüyü aç"
+                aria-expanded={isMenuOpen}
+              >
                 {pageType === "home" ? (
-                  <svg className={styles.whiteSvg}>
+                  <svg className={styles.whiteSvg} aria-hidden="true">
                     <use href={`${sprite}#burger`} />
                   </svg>
                 ) : (
-                  <svg className={styles.greenSvg}>
+                  <svg className={styles.greenSvg} aria-hidden="true">
                     <use href={`${sprite}#burger`} />
                   </svg>
                 )}
@@ -53,13 +58,18 @@ const Header = ({ pageType }) => {
           )}
 
           {!isLoggedIn && !isDesktop && (
-            <button className={styles.burgerBtn} onClick={handleOpenMenu}>
+            <button 
+              className={styles.burgerBtn} 
+              onClick={handleOpenMenu}
+              aria-label="Menüyü aç"
+              aria-expanded={isMenuOpen}
+            >
               {pageType === "home" ? (
-                <svg className={styles.whiteSvg}>
+                <svg className={styles.whiteSvg} aria-hidden="true">
                   <use href={`${sprite}#burger`} />
                 </svg>
               ) : (
-                <svg className={styles.greenSvg}>
+                <svg className={styles.greenSvg} aria-hidden="true">
                   <use href={`${sprite}#burger`} />
                 </svg>
               )}

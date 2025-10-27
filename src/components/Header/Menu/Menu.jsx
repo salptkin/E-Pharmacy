@@ -32,11 +32,22 @@ const Menu = ({ isOpen, onClose, pageType }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
+    <div 
+      className={styles.overlay} 
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="menu-title"
+    >
       <div className={styles.content} onClick={(e) => e.stopPropagation()}>
         <div className={styles.container}>
-          <button type="button" className={styles.closeBtn} onClick={onClose}>
-            <svg>
+          <button 
+            type="button" 
+            className={styles.closeBtn} 
+            onClick={onClose}
+            aria-label="Menüyü kapat"
+          >
+            <svg aria-hidden="true">
               <use href={`${sprite}#close`} />
             </svg>
           </button>

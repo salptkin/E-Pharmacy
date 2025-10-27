@@ -56,7 +56,7 @@ const ProductInfo = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.imgBox}>
-          <img src={product.photo} alt="product" />
+          <img src={product.photo} alt={`${product.name} ürün görseli`} loading="lazy" />
         </div>
         <div className={styles.infoBox}>
           <div className={styles.namePriceBox}>
@@ -67,15 +67,24 @@ const ProductInfo = () => {
             <p className={styles.price}>{`৳${product.price}`}</p>
           </div>
           <div className={styles.btnBox}>
-            <div className={styles.amountBox}>
-              <button type="button" onClick={handleIncreaseAmount}>
-                <svg>
+            <div className={styles.amountBox} role="group" aria-label="Miktar seçici">
+              <button 
+                type="button" 
+                onClick={handleIncreaseAmount}
+                aria-label="Miktarı artır"
+              >
+                <svg aria-hidden="true">
                   <use href={`${sprite}#plus`} />
                 </svg>
               </button>
-              <p>{amount}</p>
-              <button type="button" onClick={handleDecreaseAmount}>
-                <svg>
+              <p aria-live="polite">{amount}</p>
+              <button 
+                type="button" 
+                onClick={handleDecreaseAmount}
+                aria-label="Miktarı azalt"
+                disabled={amount === 0}
+              >
+                <svg aria-hidden="true">
                   <use href={`${sprite}#minus`} />
                 </svg>
               </button>
@@ -84,6 +93,7 @@ const ProductInfo = () => {
               type="button"
               className={styles.addToCartBtn}
               onClick={() => handleAddToCart(product._id)}
+              aria-label={`${product.name} ürününü sepete ekle`}
             >
               Add to cart
             </button>

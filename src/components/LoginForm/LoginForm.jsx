@@ -44,13 +44,15 @@ const LoginForm = () => {
             {isMobile && (
               <img
                 srcSet={`${usualMob} 1x, ${retinaMob} 2x`}
-                alt="illustration"
+                alt="İlaç ilaçlanmış zemin üzerinde tıbbi simgeler"
+                loading="lazy"
               />
             )}
             {isTabletOrDesktop && (
               <img
                 srcSet={`${usualTab} 1x, ${retinaTab} 2x`}
-                alt="illustration"
+                alt="İlaç ilaçlanmış zemin üzerinde tıbbi simgeler"
+                loading="lazy"
               />
             )}
           </div>
