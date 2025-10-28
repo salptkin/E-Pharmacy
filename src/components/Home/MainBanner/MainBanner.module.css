@@ -2,15 +2,24 @@
     width: 331px;
     height: 312px;
     padding: 19px 0 91px;
-    background-image: url('/images/mainbanner-mob@1x.png');
+    background-image: image-set(
+        url('/images/mainbanner-mob@1x.webp') type('image/webp') 1x,
+        url('/images/mainbanner-mob@2x.webp') type('image/webp') 2x,
+        url('/images/mainbanner-mob@1x.png') type('image/png') 1x,
+        url('/images/mainbanner-mob@2x.png') type('image/png') 2x
+    );
     background-size: cover;
     background-position: center;
+    content-visibility: auto; /* avoid rendering work offscreen */
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .heroBox {
-        background-image: url('/images/mainbanner-mob@2x.png');
+        background-image: image-set(
+            url('/images/mainbanner-mob@2x.webp') type('image/webp') 2x,
+            url('/images/mainbanner-mob@2x.png') type('image/png') 2x
+        );
     }
 }
 
@@ -19,13 +28,21 @@
         width: 704px;
         height: 508px;
         padding: 140px 64px 156px 31px;
-        background-image: url('/images/mainbanner-tab@1x.png');
+        background-image: image-set(
+            url('/images/mainbanner-tab@1x.webp') type('image/webp') 1x,
+            url('/images/mainbanner-tab@2x.webp') type('image/webp') 2x,
+            url('/images/mainbanner-tab@1x.png') type('image/png') 1x,
+            url('/images/mainbanner-tab@2x.png') type('image/png') 2x
+        );
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi) {
         .heroBox {
-            background-image: url('/images/mainbanner-tab@2x.png');
+            background-image: image-set(
+                url('/images/mainbanner-tab@2x.webp') type('image/webp') 2x,
+                url('/images/mainbanner-tab@2x.png') type('image/png') 2x
+            );
         }
     }
 }
@@ -34,13 +51,21 @@
     .heroBox {
         width: 749px;
         padding: 140px 86px 156px 54px;
-        background-image: url('/images/mainbanner-desk@1x.png');
+        background-image: image-set(
+            url('/images/mainbanner-desk@1x.webp') type('image/webp') 1x,
+            url('/images/mainbanner-desk@2x.webp') type('image/webp') 2x,
+            url('/images/mainbanner-desk@1x.png') type('image/png') 1x,
+            url('/images/mainbanner-desk@2x.png') type('image/png') 2x
+        );
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi) {
         .heroBox {
-            background-image: url('/images/mainbanner-desk@2x.png');
+            background-image: image-set(
+                url('/images/mainbanner-desk@2x.webp') type('image/webp') 2x,
+                url('/images/mainbanner-desk@2x.png') type('image/png') 2x
+            );
         }
     }
 }

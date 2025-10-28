@@ -8,10 +8,14 @@ import { loginSchema } from "../../schemas/schemas";
 import styles from "./LoginForm.module.css";
 import Logo from "../Header/HeaderLogo/HeaderLogo";
 
-const usualMob = "/images/pill-mob@1x.png";
-const retinaMob = "/images/pill-mob@2x.png";
-const usualTab = "/images/pill-tab@1x.png";
-const retinaTab = "/images/pill-tab@2x.png";
+const mobPng1x = "/images/pill-mob@1x.png";
+const mobPng2x = "/images/pill-mob@2x.png";
+const mobWebp1x = "/images/pill-mob@1x.webp";
+const mobWebp2x = "/images/pill-mob@2x.webp";
+const tabPng1x = "/images/pill-tab@1x.png";
+const tabPng2x = "/images/pill-tab@2x.png";
+const tabWebp1x = "/images/pill-tab@1x.webp";
+const tabWebp2x = "/images/pill-tab@2x.webp";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -42,18 +46,28 @@ const LoginForm = () => {
           </h2>
           <div className={styles.imgWrapper}>
             {isMobile && (
-              <img
-                srcSet={`${usualMob} 1x, ${retinaMob} 2x`}
-                alt="İlaç ilaçlanmış zemin üzerinde tıbbi simgeler"
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/webp" srcSet={`${mobWebp1x} 1x, ${mobWebp2x} 2x`} />
+                <source type="image/png" srcSet={`${mobPng1x} 1x, ${mobPng2x} 2x`} />
+                <img
+                  src={mobPng1x}
+                  alt="İlaç ilaçlanmış zemin üzerinde tıbbi simgeler"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             )}
             {isTabletOrDesktop && (
-              <img
-                srcSet={`${usualTab} 1x, ${retinaTab} 2x`}
-                alt="İlaç ilaçlanmış zemin üzerinde tıbbi simgeler"
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/webp" srcSet={`${tabWebp1x} 1x, ${tabWebp2x} 2x`} />
+                <source type="image/png" srcSet={`${tabPng1x} 1x, ${tabPng2x} 2x`} />
+                <img
+                  src={tabPng1x}
+                  alt="İlaç ilaçlanmış zemin üzerinde tıbbi simgeler"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             )}
           </div>
         </div>

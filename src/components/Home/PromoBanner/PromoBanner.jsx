@@ -4,12 +4,18 @@ import { useMediaQuery } from "react-responsive";
 import styles from "./PromoBanner.module.css";
 
 const sprite = "/images/sprite.svg";
-const usualMob = "/images/promobanner-mob@1x.png";
-const retinaMob = "/images/promobanner-mob@2x.png";
-const usualTab = "/images/promobanner-tab@1x.png";
-const retinaTab = "/images/promobanner-tab@2x.png";
-const usualDesk = "/images/promobanner-desk@1x.png";
-const retinaDesk = "/images/promobanner-desk@2x.png";
+const mobPng1x = "/images/promobanner-mob@1x.png";
+const mobPng2x = "/images/promobanner-mob@2x.png";
+const mobWebp1x = "/images/promobanner-mob@1x.webp";
+const mobWebp2x = "/images/promobanner-mob@2x.webp";
+const tabPng1x = "/images/promobanner-tab@1x.png";
+const tabPng2x = "/images/promobanner-tab@2x.png";
+const tabWebp1x = "/images/promobanner-tab@1x.webp";
+const tabWebp2x = "/images/promobanner-tab@2x.webp";
+const deskPng1x = "/images/promobanner-desk@1x.png";
+const deskPng2x = "/images/promobanner-desk@2x.png";
+const deskWebp1x = "/images/promobanner-desk@1x.webp";
+const deskWebp2x = "/images/promobanner-desk@2x.webp";
 
 const PromoBanner = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
@@ -35,13 +41,43 @@ const PromoBanner = () => {
           </div>
           <div className={styles.imgBox}>
             {isMobile && (
-              <img srcSet={`${usualMob} 1x, ${retinaMob} 2x`} alt="illustration" />
+              <picture>
+                <source type="image/webp" srcSet={`${mobWebp1x} 1x, ${mobWebp2x} 2x`} />
+                <source type="image/png" srcSet={`${mobPng1x} 1x, ${mobPng2x} 2x`} />
+                <img 
+                  src={mobPng1x}
+                  alt="Eczane promosyon illüstrasyonu"
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 767px) 100vw, (max-width: 1439px) 50vw, 33vw"
+                />
+              </picture>
             )}
             {isTablet && (
-              <img srcSet={`${usualTab} 1x, ${retinaTab} 2x`} alt="illustration" />
+              <picture>
+                <source type="image/webp" srcSet={`${tabWebp1x} 1x, ${tabWebp2x} 2x`} />
+                <source type="image/png" srcSet={`${tabPng1x} 1x, ${tabPng2x} 2x`} />
+                <img 
+                  src={tabPng1x}
+                  alt="Eczane promosyon illüstrasyonu"
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 1439px) 50vw, 33vw"
+                />
+              </picture>
             )}
             {isDesktop && (
-              <img srcSet={`${usualDesk} 1x, ${retinaDesk} 2x`} alt="illustration" />
+              <picture>
+                <source type="image/webp" srcSet={`${deskWebp1x} 1x, ${deskWebp2x} 2x`} />
+                <source type="image/png" srcSet={`${deskPng1x} 1x, ${deskPng2x} 2x`} />
+                <img 
+                  src={deskPng1x}
+                  alt="Eczane promosyon illüstrasyonu"
+                  loading="lazy"
+                  decoding="async"
+                  sizes="33vw"
+                />
+              </picture>
             )}
           </div>
         </div>
