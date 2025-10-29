@@ -56,7 +56,14 @@ const ProductInfo = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.imgBox}>
-          <img src={product.photo} alt={`${product.name} ürün görseli`} loading="lazy" />
+          <img 
+            src={product.photo} 
+            alt={`${product.name} ürün görseli`} 
+            loading="lazy"
+            width="420"
+            height="420"
+            sizes="(max-width: 767px) 90vw, (max-width: 1439px) 50vw, 420px"
+          />
         </div>
         <div className={styles.infoBox}>
           <div className={styles.namePriceBox}>

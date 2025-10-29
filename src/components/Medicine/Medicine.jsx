@@ -87,6 +87,9 @@ const Medicine = () => {
                       src={isValidImageUrl(product.photo) ? product.photo : DEFAULT_MEDICINE_IMAGE}
                       alt={`${product.name} ürün görseli`}
                       loading="lazy"
+                      width="280"
+                      height="200"
+                      sizes="(max-width: 767px) 45vw, (max-width: 1439px) 30vw, 280px"
                       onError={(e) => {
                         e.target.src = DEFAULT_MEDICINE_IMAGE;
                       }}

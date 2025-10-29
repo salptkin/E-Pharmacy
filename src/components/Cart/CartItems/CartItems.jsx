@@ -89,6 +89,8 @@ const CartItems = () => {
                 src={product.productId.photo} 
                 alt={`${product.productId.name} ürün görseli`}
                 loading="lazy"
+                width="84"
+                height="84"
               />
             </div>
             <div className={styles.textBox}>
