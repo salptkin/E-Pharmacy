@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import sprite from "/public/images/sprite.svg";
+import sprite from "/images/sprite.svg";
 import NavLinks from "../NavLinks/Navlinks";
 import Links from "../Links/Links";
 import styles from "./Menu.module.css";

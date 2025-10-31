@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import sprite from "/public/images/sprite.svg";
+import sprite from "/images/sprite.svg";
 import styles from "./MedicineFilter.module.css";
 import { CommonContainer } from "../../../styles/GlobalStyles";
 import Select from "react-select";

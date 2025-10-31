@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import styles from "./Modal.module.css";
-import sprite from "/public/images/sprite.svg";
+import sprite from "/images/sprite.svg";
 
 const Modal = ({ isOpen, onClose, children }) => {
   const handleKeyDown = useCallback(

@@ -1,5 +1,5 @@
 import React from "react";
-import sprite from "/public/images/sprite.svg";
+import sprite from "/images/sprite.svg";
 import styles from "./Socials.module.css";
 
 const Socials = () => {

@@ -23,7 +23,7 @@ const MainBanner = () => {
               alt="Eczane ana görsel"
               width="749"
               height="508"
-              fetchpriority="high"
+              fetchPriority="high"
               decoding="async"
             />
           </picture>

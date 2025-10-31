@@ -10,6 +10,7 @@ import {
   getProductById,
 } from "../../redux/pharmacy/operations";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import Modal from "../Modal/Modal";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import SignIn from "../Modal/SignIn/SignIn";
@@ -43,9 +44,11 @@ const Medicine = () => {
           dispatch(getCartItems());
         })
         .catch((error) => {
-          console.log("Cart endpoint not available:", error);
-          // Geçici olarak sadece console'da göster
-          alert("Cart feature is currently unavailable. Please try again later.");
+          // Error handling is done in the addToCart thunk via toast notifications
+          // This catch is for any unexpected errors
+          if (!error.response) {
+            toast.error("Network error. Please check your connection.");
+          }
         });
     }
   };
